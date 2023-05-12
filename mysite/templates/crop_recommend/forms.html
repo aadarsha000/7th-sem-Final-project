@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class='col-6 m-auto mt-5'>
+  <h3 class="text-center">Please enter the right value</h3>
+  <form method="POST">
+    {% csrf_token %}
+    {% for form in forms %}
+    <div class="form-outline mb-4">
+      {{form.label_tag}}
+      {{form}}
+    </div>
+    {% endfor %}
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+  
+  </form>
+</div>
+{% endblock content %}

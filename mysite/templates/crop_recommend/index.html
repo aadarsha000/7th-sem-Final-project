@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    
+ {% block content %}
+    <!-- hero-section -->
+    <div class="bg-image p-5 text-center shadow-1-strong rounded" style="background-image: url('{% static 'image/ok.jpg' %}');height: 88vh; width: 100%;">
+      <div class="d-flex m-auto align-items-center justify-content-center" style="height: 100%;">
+          <h1 class="mb-3">Empowering farmers with data-driven crop recommendations and news updates.</h1>
+      </div>
+  </div>
+  <!-- hero-section -->
+
+  <main class="p-5">
+      <div class="feature-1 row">
+          <div class="col-md-6">
+              <h2 class="fs-2 fw-bold">Data-driven crop recommendations.</h2>
+              <p class="fs-5 fw-semibold">AgroMate uses advanced algorithms to provide farmers with data-driven crop recommendations based on their inputs such as soil type, region, and weather conditions. 
+              AgroMate's data-driven crop recommendations can be a valuable tool for farmers looking to optimize their crop yields. By taking into account factors such as soil type, region, and weather conditions,
+               AgroMate's algorithms can provide customized recommendations that are tailored to the unique needs of each farmer.</p>
+          </div>
+          <div class="col-md-6">
+              <img src="{% static 'image/TRACTOR.jpg' %}" class="img-fluid" alt="...">
+          </div>
+      </div>
+      <div class="feature-2 row">
+          <div class="col-6">
+              <img src="{% static 'image/WHEAT.jpg' %}" class="img-fluid" alt="...">
+          </div>
+          <div class="col-6">
+              <h2 class="fs-2 fw-bold mt-2">Increased yield and profitability</h2>
+              <p class="fs-5 fw-semibold">With accurate crop recommendations and news updates, farmers can increase their yield and profitability. AgroMate helps farmers make informed decisions that lead to better crop outcomes and financial success.
+                  When farmers have access to data-driven crop recommendations that are tailored to their specific conditions, they can make more informed decisions about which crops to plant and how to optimize their growing conditions. This can lead to higher crop yields, lower input costs, and ultimately, greater profitability.
+              </p>
+          </div>
+      </div>
+      <div class="feature-3 row">
+          <div class="col-6 mt-5">
+              <h2 class="fs-2 fw-bold">Personalized farming news updates.</h2>
+              <p class="fs-5 fw-semibold">
+                  AgroMate offers personalized farming news and updates, tailored to the farmer's interests and preferences. Stay up-to-date with the latest farming trends and news.
+                  For example, a farmer who grows corn in the Midwest may receive updates about the latest corn varieties, pest management strategies, and weather patterns that may impact their crop yields. Similarly, a farmer who grows tomatoes in the South may receive updates about new irrigation techniques, disease management strategies, and market trends for tomatoes.
+
+              </p>
+          </div>
+          <div class="col-6">
+              <img src="{% static 'image/TRACTOR.jpg' %}" class="img-fluid" alt="...">
+          </div>
+      </div>
+  </main>
+ {% endblock content %}
+    
+
+    
