@@ -21,14 +21,27 @@
                   <li class="nav-item">
                     <a class="nav-link active fw-semibold fs-5" aria-current="page" href="{% url 'home' %}">Home</a>
                   </li>
+                  {% if request.user.is_authenticated %}
                   <li class="nav-item">
                     <a class="nav-link fw-semibold fs-5 " href="{% url 'predict' %}">Recommend</a>
                   </li>
-
                   <li class="nav-item">
                     <a class="nav-link fw-semibold fs-5 " href="{% url 'all_news' %}">News</a>
                   </li>
-                  
+                  <li class="nav-item">
+                      <p class="nav-link fw-semibold fs-5">{{request.user}}</p>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold fs-5" href="{% url 'user_logout' %}">Logout</a>
+                  </li>
+                  {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold fs-5" href="{% url 'user_signup' %}">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold fs-5" href="{% url 'user_login' %}">Login</a>
+                    </li>
+                {% endif %} 
                 </ul>
               </div>
             </div>

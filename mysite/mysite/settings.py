@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crop_recommend',
     'news',
+    'account',
 ]
 
 MIDDLEWARE = [

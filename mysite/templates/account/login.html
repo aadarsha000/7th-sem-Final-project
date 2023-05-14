@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% comment %} {% block title %}
+    <title>Signup</title>
+{% endblock title %} {% endcomment %}
+
+{% block content %}
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-90">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">User Login</h2>
+
+              <form method="POST">
+                {% csrf_token %}
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Enter your Username :</label>
+                    {{form.username}}
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4cg">Enter your Password :</label>
+                  {{form.password}}
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                    <div>
+                        <strong>{{ message }}</strong>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                <button type="submit" class="btn btn-success">submit</button>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

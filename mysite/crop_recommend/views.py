@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import numpy as np
 import pandas as pd
 import pickle
+from django.contrib.auth.decorators import login_required
 
 from .forms import condition_input
 
@@ -13,9 +14,12 @@ crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
 # Create your views here.
+@login_required(login_url='/login')
 def index(request):
     return render(request, 'crop_recommend/index.html')
 
+
+# predicting crop from the input
 def crop_prediction(request):
     if request.method == "POST":
         form = condition_input(request.POST)

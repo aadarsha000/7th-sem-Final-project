@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('crop_recommend.urls')),
     path('', include('news.urls')),
+    path('', include('account.urls')),
 ]
