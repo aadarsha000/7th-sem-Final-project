@@ -12,7 +12,7 @@ Follow these steps to set up your development environment.
 
 Make sure you have the following installed:
 
-- Python (version X.X)
+- Python
 - [Virtualenv](https://virtualenv.pypa.io/) (optional but recommended)
 
 ### Installation
