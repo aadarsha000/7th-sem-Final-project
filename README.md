@@ -49,5 +49,5 @@ Make sure you have the following installed:
 
 7. Run Project
 
-   ``bash
+   ```bash
    python manage.py runserver
